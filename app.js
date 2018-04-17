@@ -45,8 +45,6 @@ bot.on("message", async message => {
         let PREFIX = config.prefix
         let commandfile = bot.commands.get(command.slice(PREFIX.length).toLowerCase());
 
-        console.log(PREFIX)
-
         if (message.content.startsWith(PREFIX)){
             if(commandfile) commandfile.run(bot,message,args);
         }
